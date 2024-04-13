@@ -7,7 +7,6 @@ import com.application.rest.service.implement.ExercisesServicesImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -96,7 +95,7 @@ public class ExercisesController {
         }
 
         @PutMapping("/update/{id}")
-        public ResponseEntity<?> updateMaker(@PathVariable UUID id, @RequestBody ExercisesDTO exercisesDTO){
+        public ResponseEntity<?> updateExercises(@PathVariable UUID id, @RequestBody ExercisesDTO exercisesDTO){
             Optional<Exercises> exercisesOptional = exercisesServices.findById(id);
 
             if(exercisesOptional.isPresent()){
